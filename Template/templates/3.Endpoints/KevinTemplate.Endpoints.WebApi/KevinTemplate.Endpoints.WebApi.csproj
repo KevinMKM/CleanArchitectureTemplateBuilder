@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>579b5384-d877-419d-8047-282357086f32</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CleanArchitectureUtility.Endpoints.WebApi" Version="9.0.0" />
+
+    <ProjectReference Include="..\..\1.Core\KevinTemplate.Core.ApplicationService\KevinTemplate.Core.ApplicationService.csproj" />
+    <ProjectReference Include="..\..\1.Core\KevinTemplate.Core.Contract\KevinTemplate.Core.Contract.csproj" />
+    <ProjectReference Include="..\..\1.Core\KevinTemplate.Core.Domain\KevinTemplate.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\2.Infra\Data\KevinTemplate.Infra.Data.SqlCommand\KevinTemplate.Infra.Data.SqlCommand.csproj" />
+    <ProjectReference Include="..\..\2.Infra\Data\KevinTemplate.Infra.Data.SqlQuery\KevinTemplate.Infra.Data.SqlQuery.csproj" />
+  </ItemGroup>
+
+</Project>
