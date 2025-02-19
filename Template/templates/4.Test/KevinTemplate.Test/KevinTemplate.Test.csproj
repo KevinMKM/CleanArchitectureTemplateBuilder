@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1.Core\KevinTemplate.Core.ApplicationService\KevinTemplate.Core.ApplicationService.csproj" />
+    <ProjectReference Include="..\..\1.Core\KevinTemplate.Core.Contract\KevinTemplate.Core.Contract.csproj" />
+    <ProjectReference Include="..\..\1.Core\KevinTemplate.Core.Domain\KevinTemplate.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\2.Infra\Data\KevinTemplate.Infra.Data.SqlCommand\KevinTemplate.Infra.Data.SqlCommand.csproj" />
+    <ProjectReference Include="..\..\2.Infra\Data\KevinTemplate.Infra.Data.SqlQuery\KevinTemplate.Infra.Data.SqlQuery.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

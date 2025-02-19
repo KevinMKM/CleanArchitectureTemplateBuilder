@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Core", "1.Core", "{85F5A3FB-C639-434F-AE38-5D5054B83BB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infra", "2.Infra", "{15468609-F025-466C-ADE8-49656DD1B5B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Endpoints", "3.Endpoints", "{3C2BAD2A-5113-4F1A-B2A1-B30FFDFA807E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Test", "4.Test", "{50BDB414-7B25-4863-8191-D90A20ABD4AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Core.Domain", "1.Core\KevinTemplate.Core.Domain\KevinTemplate.Core.Domain.csproj", "{5914E0A2-1A3D-431D-AA6F-F10A3F3FAB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Core.Contract", "1.Core\KevinTemplate.Core.Contract\KevinTemplate.Core.Contract.csproj", "{25CA9A53-79FA-4E1E-9FE0-A688FE8E373F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Core.ApplicationService", "1.Core\KevinTemplate.Core.ApplicationService\KevinTemplate.Core.ApplicationService.csproj", "{D95C162E-4AF5-491F-89D4-42299CCA52F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3FDA3140-E1BB-4B5A-9170-181AE906B661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Infra.Data.SqlCommand", "2.Infra\Data\KevinTemplate.Infra.Data.SqlCommand\KevinTemplate.Infra.Data.SqlCommand.csproj", "{3BB2B022-D2EC-4631-A30E-E93CE788B602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Infra.Data.SqlQuery", "2.Infra\Data\KevinTemplate.Infra.Data.SqlQuery\KevinTemplate.Infra.Data.SqlQuery.csproj", "{03454C57-8C07-4188-BA77-58BDC0BD69BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Test", "4.Test\KevinTemplate.Test\KevinTemplate.Test.csproj", "{1CA21116-B78A-4941-957C-B9CB5E8EB1C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinTemplate.Endpoints.WebApi", "3.Endpoints\KevinTemplate.Endpoints.WebApi\KevinTemplate.Endpoints.WebApi.csproj", "{55530C68-1186-408C-B149-7938CBE9975D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5914E0A2-1A3D-431D-AA6F-F10A3F3FAB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5914E0A2-1A3D-431D-AA6F-F10A3F3FAB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5914E0A2-1A3D-431D-AA6F-F10A3F3FAB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5914E0A2-1A3D-431D-AA6F-F10A3F3FAB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25CA9A53-79FA-4E1E-9FE0-A688FE8E373F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25CA9A53-79FA-4E1E-9FE0-A688FE8E373F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25CA9A53-79FA-4E1E-9FE0-A688FE8E373F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25CA9A53-79FA-4E1E-9FE0-A688FE8E373F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95C162E-4AF5-491F-89D4-42299CCA52F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95C162E-4AF5-491F-89D4-42299CCA52F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95C162E-4AF5-491F-89D4-42299CCA52F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95C162E-4AF5-491F-89D4-42299CCA52F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB2B022-D2EC-4631-A30E-E93CE788B602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB2B022-D2EC-4631-A30E-E93CE788B602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB2B022-D2EC-4631-A30E-E93CE788B602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB2B022-D2EC-4631-A30E-E93CE788B602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03454C57-8C07-4188-BA77-58BDC0BD69BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03454C57-8C07-4188-BA77-58BDC0BD69BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03454C57-8C07-4188-BA77-58BDC0BD69BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03454C57-8C07-4188-BA77-58BDC0BD69BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA21116-B78A-4941-957C-B9CB5E8EB1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA21116-B78A-4941-957C-B9CB5E8EB1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA21116-B78A-4941-957C-B9CB5E8EB1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA21116-B78A-4941-957C-B9CB5E8EB1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55530C68-1186-408C-B149-7938CBE9975D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55530C68-1186-408C-B149-7938CBE9975D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55530C68-1186-408C-B149-7938CBE9975D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55530C68-1186-408C-B149-7938CBE9975D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5914E0A2-1A3D-431D-AA6F-F10A3F3FAB50} = {85F5A3FB-C639-434F-AE38-5D5054B83BB6}
+		{25CA9A53-79FA-4E1E-9FE0-A688FE8E373F} = {85F5A3FB-C639-434F-AE38-5D5054B83BB6}
+		{D95C162E-4AF5-491F-89D4-42299CCA52F3} = {85F5A3FB-C639-434F-AE38-5D5054B83BB6}
+		{3FDA3140-E1BB-4B5A-9170-181AE906B661} = {15468609-F025-466C-ADE8-49656DD1B5B2}
+		{3BB2B022-D2EC-4631-A30E-E93CE788B602} = {3FDA3140-E1BB-4B5A-9170-181AE906B661}
+		{03454C57-8C07-4188-BA77-58BDC0BD69BD} = {3FDA3140-E1BB-4B5A-9170-181AE906B661}
+		{1CA21116-B78A-4941-957C-B9CB5E8EB1C5} = {50BDB414-7B25-4863-8191-D90A20ABD4AE}
+		{55530C68-1186-408C-B149-7938CBE9975D} = {3C2BAD2A-5113-4F1A-B2A1-B30FFDFA807E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Mohsen Koorani",
+  "classifications": [ "Common", "Solution", "Kevin", "Clean Architecture" ],
+  "identity": "Kevin.CleanArchitecture.SolutionTemplate.CSharp",
+  "name": "Clean Architecture Template Builder",
+  "shortName": "CleanArchSln",
+  "sourceName": "KevinTemplate",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
