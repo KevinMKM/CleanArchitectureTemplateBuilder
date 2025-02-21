@@ -17,6 +17,8 @@ public static class Startup
     {
         var connectionString = builder.Configuration.GetConnectionString("Context");
 
+        builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+
         builder.Services.AddParrotTranslator(c =>
         {
             c.ConnectionString = connectionString;
@@ -36,7 +38,7 @@ public static class Startup
 
         builder.Services.AddDbContext<KevinTemplateCommandDbContext>(c => c.UseSqlServer(connectionString));
         builder.Services.AddDbContext<KevinTemplateQueryDbContext>(c => c.UseSqlServer(connectionString));
-        builder.Services.AddApiCore("KevinTemplate");
+        builder.Services.AddApiCore("CleanArchitectureUtility", "KevinTemplate");
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         return builder.Build();
