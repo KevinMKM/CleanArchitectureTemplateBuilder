@@ -4,7 +4,7 @@
   "classifications": [ "Common", "Solution", "Kevin", "Clean Architecture" ],
   "identity": "Kevin.CleanArchitecture.SolutionTemplate.CSharp",
   "name": "Clean Architecture Template Builder",
-  "shortName": "CleanArchSln",
+  "shortName": "cleanarchsln",
   "sourceName": "KevinTemplate",
   "preferNameDirectory": true,
   "tags": {

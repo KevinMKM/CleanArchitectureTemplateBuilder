@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CleanArchitectureUtility.Core.ApplicationServices" Version="9.0.3" />
+    <PackageReference Include="CleanArchitectureUtility.Core.ApplicationServices" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
