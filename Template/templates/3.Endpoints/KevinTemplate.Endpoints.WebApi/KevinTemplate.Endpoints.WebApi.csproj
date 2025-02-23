@@ -13,7 +13,7 @@
     <PackageReference Include="CleanArchitectureUtility.Extensions.Caching.InMemory" Version="9.0.1" />
     <PackageReference Include="CleanArchitectureUtility.Extensions.ObjectMappers.AutoMapper" Version="9.0.0" />
     <PackageReference Include="CleanArchitectureUtility.Extensions.Serializers.Microsoft" Version="9.0.1" />
-    <PackageReference Include="CleanArchitectureUtility.Extensions.Translations.Parrot" Version="9.0.1" />
+    <PackageReference Include="CleanArchitectureUtility.Extensions.Translations.Parrot" Version="9.0.4" />
     <PackageReference Include="CleanArchitectureUtility.Extensions.UsersManagement" Version="9.0.1" />
     <PackageReference Include="CleanArchitectureUtility.Utilities.SerilogRegistration" Version="9.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
