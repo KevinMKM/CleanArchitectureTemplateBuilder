@@ -4,6 +4,7 @@ using CleanArchitectureUtility.Extensions.ObjectMappers.AutoMapper.Extensions.De
 using CleanArchitectureUtility.Extensions.Serializers.Microsoft.Extensions.DependencyInjection;
 using CleanArchitectureUtility.Extensions.Translations.Parrot.Extensions.DependencyInjection;
 using CleanArchitectureUtility.Extensions.UsersManagement.Extensions.DependencyInjection;
+using KevinTemplate.Endpoints.WebApi.Extensions;
 using KevinTemplate.Infra.Data.SqlCommand.Common;
 using KevinTemplate.Infra.Data.SqlQuery.Common;
 using Microsoft.EntityFrameworkCore;
@@ -16,9 +17,7 @@ public static class Startup
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
         var connectionString = builder.Configuration.GetConnectionString("Context");
-
         builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
-
         builder.Services.AddParrotTranslator(c =>
         {
             c.ConnectionString = connectionString;
@@ -29,13 +28,9 @@ public static class Startup
         });
 
         builder.Services.AddWebUserInfoService(builder.Configuration, true);
-
         builder.Services.AddAutoMapperProfiles(option => { option.AssemblyNamesForLoadProfiles = "KevinTemplate"; });
-
         builder.Services.AddMicrosoftSerializer();
-
         builder.Services.AddInMemoryCaching();
-
         builder.Services.AddDbContext<KevinTemplateCommandDbContext>(c => c.UseSqlServer(connectionString));
         builder.Services.AddDbContext<KevinTemplateQueryDbContext>(c => c.UseSqlServer(connectionString));
         builder.Services.AddApiCore("CleanArchitectureUtility", "KevinTemplate");
@@ -46,10 +41,9 @@ public static class Startup
 
     public static WebApplication ConfigurePipeline(this WebApplication app)
     {
+        app.ConfigureMigrations();
         app.UseApiExceptionHandler();
-
         app.UseSerilogRequestLogging();
-
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
@@ -57,12 +51,8 @@ public static class Startup
         }
 
         app.UseHttpsRedirection();
-
         app.UseAuthorization();
-
         app.MapControllers();
-
-
         return app;
     }
 }

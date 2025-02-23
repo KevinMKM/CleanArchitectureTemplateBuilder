@@ -1,4 +1,4 @@
-﻿using CleanArchitectureUtility.Infra.Data.SqlCommands;
+﻿using CleanArchitectureUtility.Infra.Data.Sql;
 using KevinTemplate.Core.Contract.Common;
 
 namespace KevinTemplate.Infra.Data.SqlCommand.Common;
