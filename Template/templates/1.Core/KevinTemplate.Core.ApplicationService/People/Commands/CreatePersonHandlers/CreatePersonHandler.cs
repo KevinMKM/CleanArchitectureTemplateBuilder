@@ -6,7 +6,7 @@ using KevinTemplate.Core.Domain.People.ValueObjects;
 
 namespace KevinTemplate.Core.ApplicationService.People.Commands.CreatePersonHandlers;
 
-internal class CreatePersonHandler : CommandHandler<CreatePerson, Guid>
+public class CreatePersonHandler : CommandHandler<CreatePerson, Guid>
 {
     private readonly IPersonCommandRepository _repository;
 
@@ -15,7 +15,7 @@ internal class CreatePersonHandler : CommandHandler<CreatePerson, Guid>
         _repository = repository;
     }
 
-    public override async Task<CommandResult<Guid>> Handle(CreatePerson request)
+    public override async Task<CommandResult<Guid>> Handle(CreatePerson request, CancellationToken cancellationToken)
     {
         Person person = new(new FirstName(request.FirstName), new LastName(request.LastName));
         await _repository.InsertAsync(person);
