@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KevinTemplate.Endpoints.WebApi.Extensions;
 
-public static class MigrationX
+public static class MigrationExtension
 {
     public static WebApplication ConfigureMigrations(this WebApplication app)
     {

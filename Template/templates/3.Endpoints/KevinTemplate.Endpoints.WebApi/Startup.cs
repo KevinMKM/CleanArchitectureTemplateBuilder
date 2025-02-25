@@ -16,24 +16,17 @@ public static class Startup
 {
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
+        const string solutionName = "KevinTemplate";
         var connectionString = builder.Configuration.GetConnectionString("Context");
         builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
-        builder.Services.AddParrotTranslator(c =>
-        {
-            c.ConnectionString = connectionString;
-            c.AutoCreateSqlTable = true;
-            c.SchemaName = "dbo";
-            c.TableName = "ParrotTranslations";
-            c.ReloadDataIntervalInMinutes = 1;
-        });
-
+        builder.Services.AddParrotTranslator(connectionString);
         builder.Services.AddWebUserInfoService(builder.Configuration, true);
-        builder.Services.AddAutoMapperProfiles(option => { option.AssemblyNamesForLoadProfiles = "KevinTemplate"; });
+        builder.Services.AddAutoMapperProfiles(option => { option.AssemblyNamesForLoadProfiles = solutionName; });
         builder.Services.AddMicrosoftSerializer();
         builder.Services.AddInMemoryCaching();
         builder.Services.AddDbContext<KevinTemplateCommandDbContext>(c => c.UseSqlServer(connectionString));
         builder.Services.AddDbContext<KevinTemplateQueryDbContext>(c => c.UseSqlServer(connectionString));
-        builder.Services.AddApiCore("CleanArchitectureUtility", "KevinTemplate");
+        builder.Services.AddApiCore(solutionName);
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         return builder.Build();
