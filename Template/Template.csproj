@@ -11,7 +11,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>Mohsen Koorani</Authors>
-    <PackageVersion>9.0.15</PackageVersion>
+    <PackageVersion>9.0.16</PackageVersion>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>CleanArchitectureTemplateBuilder</PackageId>
